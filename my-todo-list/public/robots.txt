@@ -1,0 +1,94 @@
+# https://www.robotstxt.org/robotstxt.html
+
+
+#              _____
+#             |     |
+#             | | | |
+#             |_____|
+#       ____ ___|_|___ ____
+#      ()___)         ()___)
+#      // /|           |\ \\
+#     // / |           | \ \\
+#    (___) |___________| (___)
+#    (___)   (_______)   (___)
+#    (___)     (___)     (___)
+#    (___)      |_|      (___)
+#    (___)  ___/___\___   | |
+#     | |  |           |  | |
+#     | |  |___________| /___\ 
+#    /___\  |||     ||| //   \\
+#   //   \\ |||     ||| \\   //
+#   \\   // |||     |||  \\ //
+#    \\ // ()__)   (__()
+#          ///       \\\ 
+#         ///         \\\ 
+#       _///___     ___\\\_
+#      |_______|   |_______|
+#
+#
+
+User-agent: *
+Disallow:
+
+L'instruction User-agent: * signifie que la ou les instruction(s) qui suivent s'applique pour tous les robots.
+L'instruction Disallow: signifie que le moteur peut parcourir l'ensemble des répertoires et des pages du site.
+Note : cela revient au même que de ne pas mettre de robots.txt sur le site.
+//
+
+User-agent: *
+Disallow: /
+
+L'instruction Disallow: / signifie que le moteur ne doit pas explorer l'ensemble des répertoires et des pages du site. 
+Cela aura pour effet de bloquer totalement les robots d'exploration des moteurs.
+//
+
+
+Lorsque vous souhaitez bloquer seulement certains répertoires :
+User-agent: *
+Disallow: /repertoire-a/
+Disallow: /repertoire-b/
+//
+
+Lorsque vous souhaitez bloquer des pages spécifiques :
+User-agent: *
+Disallow: /page-a.html
+Disallow: /page-b.html
+//
+
+Si vous souhaitez bloquer l'accès à des répertoires à certains robots, 
+il suffit de spécifier son nom dans le paramètre User-agent :
+User-agent: Googlebot
+Disallow: /repertoire-a/
+
+User-agent: *
+Disallow:
+//
+
+Si vous souhaitez bloquer l'accès à des répertoires ou des fichiers spécifiques commençant par une séquence de caractères donnée. 
+Dans l'exemple ci-dessous, le robots.txt va bloquer l'accès à tous les fichiers et répertoires commençants par "hello". 
+
+User-agent: *
+Disallow: /hello*
+
+
+
+#
+#       o     O
+#     __|_____|___
+#    |    --      |
+#    |  ( o )   ( o )
+#  { |        /   |
+#    |     [wwww]  < *Exterminate all humans.txt* )
+#    [____________|
+#       |   |              /Vvvv/
+#  _____|___|____          |___/
+# /______________\_________/   |
+# |              |             /
+# | ( / )  ( + ) |__|__|__|_|_/
+# |              |
+# | [ -vV--vV-]  |
+# |              |
+# |______________/
+#
+
+
